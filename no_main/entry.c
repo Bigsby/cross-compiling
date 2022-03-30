@@ -2,8 +2,8 @@
 
 #define EXIT(code) \
     __asm__( \
-        "mov $60, %rax\n" \
-        "mov $" #code ", %rdi\n" \
+        "mov $60, %rax\n"           /* exit syscall */ \
+        "mov $" #code ", %rdi\n"    /* set exit code */ \
         "syscall");
 
 int entry(void)
