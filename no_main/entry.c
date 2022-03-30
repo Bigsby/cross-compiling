@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 #define EXIT(code) \
     __asm__( \
@@ -8,6 +8,6 @@
 
 int entry(void)
 {
-    printf("In entry!\n");
+    write(1, "In entry!\n", 10);
     EXIT(0)
 }

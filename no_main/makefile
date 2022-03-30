@@ -1,5 +1,5 @@
-entry: entry.c
-	gcc -nostartfiles -Wl,-eentry -o $@ $^ 
+entry: entry.S entry.c
+	gcc -nostartfiles -o $@ $^ 
 
 .PHONY: clean
 
